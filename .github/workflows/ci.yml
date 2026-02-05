@@ -9,9 +9,9 @@ on:
       - main
 
 jobs:
-  ci-test:
+  test_job:
     runs-on: ubuntu-latest
-    name: CI Test
+    name: Run Pytest
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
