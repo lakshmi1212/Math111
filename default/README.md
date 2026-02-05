@@ -1,35 +1,25 @@
-# Math111
+# Math Operations
 
-This repository provides basic math operations with automated testing and CI integration.
-
-## Features
-- Addition and subtraction functions
-- Comprehensive pytest-based test suite
-- GitHub Actions-ready workflow metadata
+This repository provides basic math operations (addition and subtraction) as Python functions, along with automated tests and CI workflow integration.
 
 ## Usage
 
 ```
 from src.math_operations import add, subtract
 
-print(add(3, 5))        # 8
-print(subtract(10, 4))  # 6
+result1 = add(2, 3)         # 5
+result2 = subtract(5, 2)    # 3
 ```
 
-## Running Tests
+## Testing
 
-Ensure dependencies are installed:
+Install dependencies and run tests:
 
 ```
 pip install -r default/requirements.txt
+pytest tests/
 ```
 
-Run all tests:
+## CI/CD
 
-```
-pytest tests/ -v --tb=short
-```
-
-## CI/CD Integration
-
-Workflow metadata is provided in `default/math.json` for downstream automation.
+A GitHub Actions workflow is expected at `.github/workflows/ci.yml` to run tests automatically on push and pull requests.
