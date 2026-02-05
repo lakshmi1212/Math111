@@ -1,28 +1,23 @@
-# Math111
+# Math Operations
 
-Math111 provides basic math operations: addition and subtraction.
+This repository provides basic math operations (addition and subtraction) with production-quality tests and CI/CD integration instructions.
 
 ## Usage
 
 ```
 from src.math_operations import add, subtract
-
-result_add = add(2, 3)
-result_subtract = subtract(5, 2)
+result = add(2, 3)
+print(result)
 ```
 
 ## Testing
 
-Install dependencies:
+All tests are in the `tests/` folder. Run tests using:
+
 ```
-pip install -r default/requirements.txt
-```
-Run tests:
-```
-pytest tests/ -v --tb=short
+pytest tests/
 ```
 
-## CI Workflow
-- Workflow file: `.github/workflows/ci.yml`
-- Uses pytest for running tests in `tests/` folder.
+## CI/CD
 
+See `.github/workflows/ci.yml` for the pipeline configuration.
