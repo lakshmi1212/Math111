@@ -6,12 +6,11 @@
   },
   "workflow": {
     "file_path": ".github/workflows/ci.yml",
-    "job_id": "math_ci_job",
-    "job_name": "Math CI Job"
+    "name": "CI Pipeline"
   },
   "triggers": {
     "push": [".github/workflows"],
-    "pull_request": ["feature1"]
+    "pull_request": ["main"]
   },
   "runtime": {
     "language": "python",
@@ -25,29 +24,29 @@
     "pytest_command": "python -m pytest tests/ -v --tb=short",
     "fail_on_error": true
   },
-  "requirements_file": "default/requirements.txt",
   "constraints": {
     "modify_source_files": false,
     "modify_test_files": false
   },
   "commit": {
     "enabled": true,
-    "message": "Add math operations, tests, requirements, and JSON metadata for CI integration"
+    "message": "Add CI workflow for Python tests"
   },
   "jobs": [
     {
-      "job_id": "math_ci_job",
+      "job_id": "ci",
+      "job_name": "Run Pytest Suite",
       "runs_on": "ubuntu-latest",
       "steps": [
         {
           "step_name": "Checkout code",
           "action_type": "uses",
-          "action": "actions/checkout@v3"
+          "action": "actions/checkout@v4"
         },
         {
           "step_name": "Set up Python",
           "action_type": "uses",
-          "action": "actions/setup-python@v4",
+          "action": "actions/setup-python@v5",
           "with": {
             "python-version": "3.10"
           }
