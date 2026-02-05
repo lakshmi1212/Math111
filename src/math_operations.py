@@ -1,7 +1,7 @@
-def add(a: float, b: float) -> float:
+def add(a, b):
     """Return the sum of two numbers."""
     return a + b
 
-def subtract(a: float, b: float) -> float:
-    """Return the difference of two numbers."""
+def subtract(a, b):
+    """Return the difference between two numbers."""
     return a - b
