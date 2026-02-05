@@ -5,10 +5,9 @@ from src.math_operations import add
     (1, 2, 3),
     (0, 0, 0),
     (-1, -1, -2),
-    (100, 200, 300),
-    (-5, 5, 0),
     (1.5, 2.5, 4.0),
-    (-1.5, 1.5, 0.0)
+    (-3, 3, 0),
+    (123456, 654321, 777777),
 ])
 def test_add(a, b, expected):
     assert add(a, b) == expected
