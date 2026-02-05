@@ -1,8 +1,9 @@
-def add(a, b):
+# math_operations.py
+
+def add(a: float, b: float) -> float:
     """Return the sum of a and b."""
     return a + b
 
-
-def subtract(a, b):
-    """Return the difference of a and b (a - b)."""
+def subtract(a: float, b: float) -> float:
+    """Return the result of subtracting b from a."""
     return a - b
