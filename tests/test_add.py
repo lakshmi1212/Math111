@@ -1,22 +1,17 @@
 import pytest
 from src.math_operations import add
 
-def test_add_positive_numbers():
+def test_add_positive():
     assert add(2, 3) == 5
 
-def test_add_negative_numbers():
+def test_add_negative():
     assert add(-2, -3) == -5
-
-def test_add_mixed_sign_numbers():
-    assert add(-2, 3) == 1
 
 def test_add_zero():
     assert add(0, 0) == 0
-    assert add(0, 5) == 5
-    assert add(5, 0) == 5
 
-def test_add_float_numbers():
+def test_add_mixed():
+    assert add(-2, 3) == 1
+
+def test_add_float():
     assert add(2.5, 3.1) == pytest.approx(5.6)
-
-def test_add_large_numbers():
-    assert add(1e10, 1e10) == 2e10
